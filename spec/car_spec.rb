@@ -2,7 +2,7 @@ require './lib/car'
 require './lib/train'
 
 RSpec.describe Car do
-  describe 'Instanition' do
+  describe 'Instantiation' do
     it 'exists' do
       car1 = Car.new({type: 'Mail', weight: 5})
 
