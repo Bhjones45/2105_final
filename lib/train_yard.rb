@@ -27,9 +27,11 @@ class TrainYard
   end
 
   def sorted_cargo_list
-    y = @trains.map do |car|
-      car.cargo
+    y = @trains.map do |train|
+      train.cargo.map do |car, number|
+      car.type
     end
     require "pry"; binding.pry
+    end
   end
 end
