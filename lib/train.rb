@@ -8,4 +8,12 @@ class Train
     @type = info[:type]
     @cargo = Hash.new(0)
   end
+
+  def count_cars(car)
+    @cargo.count
+  end
+
+  def add_cars(car, amount)
+    @cargo[car] += amount
+  end
 end
