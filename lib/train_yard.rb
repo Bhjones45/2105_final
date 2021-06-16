@@ -1,6 +1,6 @@
 class TrainYard
   attr_reader :location,
-              :trains
+  :trains
 
   def initialize(info)
     @location = info[:location]
@@ -29,9 +29,11 @@ class TrainYard
   def sorted_cargo_list
     y = @trains.map do |train|
       train.cargo.map do |car, number|
-      car.type
-    end
-    require "pry"; binding.pry
+        car.type
+      end
+    end.flatten.uniq
+    y.sort_by do |type|
+      type
     end
   end
 end
