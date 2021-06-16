@@ -25,4 +25,11 @@ class TrainYard
       train.cargo.include?(car)
     end
   end
+
+  def sorted_cargo_list
+    y = @trains.map do |car|
+      car.cargo
+    end
+    require "pry"; binding.pry
+  end
 end
