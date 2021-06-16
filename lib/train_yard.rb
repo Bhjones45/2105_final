@@ -40,7 +40,10 @@ class TrainYard
   def total_inventory
     inv = Hash.new(0)
     @trains.each do |train|
-      train.cargo
+      train.cargo.each do |car, quantity|
+        inv[car] += quantity
       end
+    end
+    inv
   end
 end
