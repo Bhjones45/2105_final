@@ -16,11 +16,13 @@ class TrainYard
       train.type
     end
     x.sort_by do |type|
-      type.uniq
-    end
+      type
+    end.uniq
   end
 
-  # def trains_containing(car)
-  #
-  # end
+  def trains_containing(car)
+    @trains.find_all do |train|
+      train.cargo.include?(car)
+    end
+  end
 end
