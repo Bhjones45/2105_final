@@ -11,6 +11,10 @@ class TrainYard
     @trains << train
   end
 
+  def types_of_trains
+  end
+  
   def trains_containing(car)
+
   end
 end
