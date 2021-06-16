@@ -11,10 +11,6 @@ class TrainYard
     @trains << train
   end
 
-  def weight
-    @trains.map do ||
-      train.cargo
-    end
-    require "pry"; binding.pry
+  def trains_containing(car)
   end
 end
