@@ -1,6 +1,6 @@
 class TrainYard
   attr_reader :location,
-  :trains
+              :trains
 
   def initialize(info)
     @location = info[:location]
@@ -45,5 +45,10 @@ class TrainYard
       end
     end
     inv
+  end
+
+  def overflow_cars
+    #find all cars that are pulled by more than one train and
+    #return car if car amount exceeds 10
   end
 end
