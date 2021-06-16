@@ -36,4 +36,11 @@ class TrainYard
       type
     end
   end
+
+  def total_inventory
+    inv = Hash.new(0)
+    @trains.each do |train|
+      train.cargo
+      end
+  end
 end
