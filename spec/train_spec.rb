@@ -24,7 +24,7 @@ RSpec.describe Car do
 
   describe 'methods' do
 
-    it 'can count cars' do
+    xit 'can count cars' do
       car1 = Car.new({type: 'Mail', weight: 5})
       car2 = Car.new({type: 'Passengers', weight: 1})
       train1 = Train.new({name: 'Thomas', type: 'Tank'})
@@ -39,6 +39,10 @@ RSpec.describe Car do
       train1.add_cars(car1, 3)
 
       expect(train1.cargo).to eq(car1 => 5)
+
+      train1.count_cars(car1)
+      train1.add_cars(car2, 10)
+      expect(train1.cargo).to eq({car1 => 5, car2 => 10})
     end
   end
 end
