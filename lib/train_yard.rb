@@ -12,9 +12,15 @@ class TrainYard
   end
 
   def types_of_trains
+    x = @trains.map do |train|
+      train.type
+    end
+    x.sort_by do |type|
+      type.uniq
+    end
   end
-  
-  def trains_containing(car)
 
-  end
+  # def trains_containing(car)
+  #
+  # end
 end
