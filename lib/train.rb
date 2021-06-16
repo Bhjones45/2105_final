@@ -10,7 +10,7 @@ class Train
   end
 
   def count_cars(car)
-    @cargo.count
+    @cargo[car]
   end
 
   def add_cars(car, amount)

@@ -24,7 +24,7 @@ RSpec.describe Car do
 
   describe 'methods' do
 
-    xit 'can count cars' do
+    it 'can count cars' do
       car1 = Car.new({type: 'Mail', weight: 5})
       car2 = Car.new({type: 'Passengers', weight: 1})
       train1 = Train.new({name: 'Thomas', type: 'Tank'})
